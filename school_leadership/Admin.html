@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <header class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <img
+                                src="http://schooledu.ap.gov.in/samagrashiksha/wp-content/uploads/2024/05/ap-Gov_Logo-copy-removebg-preview.png">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="dept-text">
+                            <h1>Department of School Education</h1>
+                            <h5> Government of Andhra Pradesh</h5>
+                            <h6>Samagra Shiksha - SIEMAT</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="logo-samagra">
+                            <img
+                                src="http://schooledu.ap.gov.in/samagrashiksha/wp-content/uploads/2024/03/Samagra-Shiksha-Logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="fetching heading-title">
+            <h2>School Leadership Training</h2>
+            <button type="logout" class="logout" id="logout-data">LOGOUT</button>
+        </section>
+        <section id="tab">
+            <div class="tab-bar">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+                        <!--new added -->
+                        <button class="nav-link active" id="report-card" data-bs-toggle="tab" data-bs-target="#nav-new"
+                            type="button" role="tab" aria-controls="nav-new" aria-selected="false">Dash Board</button>
+                        <!--new added -->
+                        <!-- <button class="nav-link" id="overall-score" data-bs-toggle="tab" data-bs-target="#nav-overall"
+                            type="button" role="tab" aria-controls="nav-overall" aria-selected="true">Overall
+                            Score</button>
+                        <button class="nav-link" id="cycleOne" data-bs-toggle="tab" data-bs-target="#nav-cycle1"
+                            type="button" role="tab" aria-controls="nav-cycle1" aria-selected="false">Learning
+                            Cycle-1</button>
+                        <button class="nav-link" id="cycleTwo" data-bs-toggle="tab" data-bs-target="#nav-cycle2"
+                            type="button" role="tab" aria-controls="nav-cycle2" aria-selected="false">Learning
+                            Cycle-2</button>
+                        <button class="nav-link" id="learning-cycle-analysis" data-bs-toggle="tab"
+                            data-bs-target="#nav-lc_analysis" type="button" role="tab" aria-controls="nav-lc_analysis"
+                            aria-selected="false">Learning Cycle Analysis</button>
+                        <button class="nav-link" id="competencywisetab" data-bs-toggle="tab"
+                            data-bs-target="#nav-competency_analysis" type="button" role="tab"
+                            aria-controls="nav-competency_analysis" aria-selected="false">Competency Wise
+                            Analysis</button> -->
+                        <!-- <button class="nav-link" id="main-dashboard" data-bs-toggle="tab"
+                            data-bs-target="#overall_dashboard" type="button" role="tab"
+                            aria-controls="overall_dashboard" aria-selected="false">Dashboard</button> -->
+
+
+                    </div>
+                </nav>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-new" role="tabpanel" aria-labelledby="nav-new-tab">
+                        <section class="fetching data_fetching" id="competency">
+                            <!-- Page 1 Content -->
+                            <div id="page1-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="" class="fetchinh-text">Name of the School Head :</label>
+                                            </div>
+                                            <div class="col-md-6 text nameOfSchoolHead"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="" class="fetchinh-text">Name of the School :</label>
+                                            </div>
+                                            <div class="col-md-6 text nameOfSchool"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="" class="fetchinh-text">UDISE Code :</label>
+                                            </div>
+                                            <div class="col-md-6 text udiseCode"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="" class="fetchinh-text">Name of the District :</label>
+                                            </div>
+                                            <div class="col-md-6 text district"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="" class="fetchinh-text">Contact Number :</label>
+                                            </div>
+                                            <div class="col-md-6 text contactNumber"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="" class="fetchinh-text">Total years in current designation
+                                                    :</label>
+                                            </div>
+                                            <div class="col-md-6 text designation"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="responsive">
+                                    <h3>Overall Score Card</h3>
+                                    <table class="table table-success table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name of the Intervention/Activity</th>
+                                                <th>Status</th>
+                                                <th>Overall Score</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="overallScore" id="report-card-overallScore">
+                                            <!-- Data will be fetched from API -->
+                                        </tbody>
+                                    </table>
+
+                                    <h3>Competency Wise Analysis :</h3>
+                                    <table class="table table-success table-striped competencyWise-table">
+                                        <thead>
+                                            <tr class="text-center right">
+                                                <th class="center" rowspan="2">Leadership Competency</th>
+                                                <th colspan="7">Competency Level</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Base Line(%)</th>
+                                                <th>State Average(%)</th>
+                                                <th>Mid Line(%)</th>
+                                                <th>State Average(%)</th>
+                                                <th>End Line(%)</th>
+                                                <th>State Average(%)</th>
+                                                <th>Improvement(%)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="reportCard">
+                                            <!-- Data will be fetched from API -->
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                                <div id="drawerChart">
+                                    <canvas id="reportCardChart" ></canvas>
+                                    <div id="legend"></div>
+                                </div>
+                            </div>
+                            <div class="page-break"></div>
+                            <!-- Page 2 Content -->
+                            <div id="page2-content">
+                                <h3>Learning Cycle Analysis</h3>
+                                <table class="table table-success table-striped cycle-two-table">
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2" class="text-center center">Leadership Competancy</th>
+                                            <th colspan="8" class="text-center">Score</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Maximum</th>
+                                            <th scope="col">Pre-Test</th>
+                                            <th scope="col">%</th>
+                                            <th scope="col">Post-Test</th>
+                                            <th scope="col">%</th>
+                                            <th scope="col">Difference</th>
+                                            <th>%</th>
+                                            <th>Competency Level</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="report-card-learningcycle">
+                                        <th colspan="9" class="table-no-data">No Data Found</th>
+                                    </tbody>
+                                </table>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="chart-dashbord">
+                                            <h3>LC-1</h3>
+                                            <canvas id="ReportCard-Learning_cycle_one"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="chart-dashbord">
+                                            <h3>LC-2</h3>
+                                            <canvas id="ReportCard-Learning_cycle_two"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-break"></div>
+                        </section>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-overall" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <section class="fetching data_overall" id="overall">
+                            <!--<h2>Overall Score Card</h2> -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School Head
+                                                <span>:</span></label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchoolHead">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Complex
+                                                <span>:</span></label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfTheComplex">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School
+                                                <span>:</span></label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchool">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Complex UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text complexUDISECode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text udiseCode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the District :</label>
+                                        </div>
+                                        <div class="col-md-6 text district">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Contact Number :</label>
+                                        </div>
+                                        <div class="col-md-6 text contactNumber">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Mandal :</label>
+                                        </div>
+                                        <div class="col-md-6 text mandal ">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="responsive">
+                                <table class="table table-success table-striped">
+                                    <thead>
+                                        <tr class="right">
+                                            <th>Name of the Intervention/Activity</th>
+                                            <th>Status</th>
+                                            <th>Overall Score</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody class="overallScore" id="overallScorecard">
+                                        <!--------------------Data will featch from api----------------------->
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="alert">
+                                <p><span>*** &nbsp;Please refer the Following Measurement Matrix for Competency
+                                        Level</span></p>
+                                <p>Novice = 0-25%, Advanced Beginner = 26-50%, Proficient = 51-75%, Expert = Above 76%
+                                </p>
+                            </div>
+                            <div style="overflow-x:auto;">
+                                <h3>Dashboard</h3>
+                                <iframe title="Lc-1 Pre_test" width="100%" height="800"
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiYmIzNjFlYmMtMjgzZi00NDc3LTgwNWYtZDIwN2FkOTE1OGY1IiwidCI6IjBhMDJkNWMxLTBhNTItNDkwZi1iMDRlLThjNDk2OTZjN2U5YiJ9&pageName=19bb22fd5cc846f4f0df"
+                                    frameborder="0" allowFullScreen="true"></iframe>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="nav-cycle1" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <section class="fetching data_fetching remark" id="cycle_one">
+                            <!--<h2>Learning Cycle 01</h2>-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School Head :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchoolHead">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Complex :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfTheComplex">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchool">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Complex UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text complexUDISECode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text udiseCode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the District :</label>
+                                        </div>
+                                        <div class="col-md-6 text district">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Contact Number :</label>
+                                        </div>
+                                        <div class="col-md-6 text contactNumber">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Mandal :</label>
+                                        </div>
+                                        <div class="col-md-6 text mandal">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Training Batch :</label>
+                                        </div>
+                                        <div class="col-md-6 text trainingBatch">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Training Venue :</label>
+                                        </div>
+                                        <div class="col-md-6 text">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="responsive">
+                                <table class="table table-success table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2" class="text-center center">Leadership Competancy</th>
+                                            <th colspan="8" class="text-center">Score</th>
+                                        </tr>
+                                        <tr class="right">
+                                            <th scope="col">Maximum</th>
+                                            <th scope="col">Pre-Test</th>
+                                            <th scope="col">%</th>
+                                            <th scope="col">Post-Test</th>
+                                            <th scope="col">%</th>
+                                            <th scope="col">Difference</th>
+                                            <th>%</th>
+                                            <th>Compitency Level</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="LC-One">
+                                        <tr class="right">
+                                            <th colspan="9" class="table-no-data">No Data Found</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="alert">
+                                <p><span>*** &nbsp;Please refer the Following Measurement Matrix for Competency
+                                        Level</span></p>
+                                <p>Novice = 0-25%, Advanced Beginner = 26-50%, Proficient = 51-75%, Expert = Above 76%
+                                </p>
+                            </div>
+                            <div class="row feedback-field">
+                                <div class="col-md-5">
+                                    <h5>Applaud</h5>
+                                    <ul class="applaud-data-1"></ul>
+                                </div>
+                                <div class="col-md-7">
+                                    <h5>Feedback</h5>
+                                    <ul class="feedback-data-1"></ul>
+                                </div>
+                            </div>
+                            <div class="chart-dashbord">
+                                <h3>Dashboard</h3>
+                                <canvas id="cycle_One"></canvas>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="nav-cycle2" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <section class="fetching data_fetching remark" id="cycle_two">
+                            <!--<h2>Learning Cycle 02</h2>-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School Head :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchoolHead">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Complex :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfTheComplex">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchool">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Complex UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text complexUDISECode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text udiseCode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the District :</label>
+                                        </div>
+                                        <div class="col-md-6 text district">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Contact Number :</label>
+                                        </div>
+                                        <div class="col-md-6 text contactNumber">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Mandal :</label>
+                                        </div>
+                                        <div class="col-md-6 text mandal ">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6 t">
+                                            <label for="" class="fetchinh-text">Training Venue :</label>
+                                        </div>
+                                        <div class="col-md-6 text">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6 t">
+                                            <label for="" class="fetchinh-text">Training Batch :</label>
+                                        </div>
+                                        <div class="col-md-6 text trainingBatch">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="responsive">
+                                <table class="table table-success table-striped cycle-two-table">
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2" class="text-center center">Leadership Competancy</th>
+                                            <th colspan="8" class="text-center">Score</th>
+                                        </tr>
+                                        <tr class="right">
+                                            <th scope="col">Maximum</th>
+                                            <th scope="col">Pre-Test</th>
+                                            <th scope="col">%</th>
+                                            <th scope="col">Post-Test</th>
+                                            <th scope="col">%</th>
+                                            <th scope="col">Difference</th>
+                                            <th>%</th>
+                                            <th>Compitency Level</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cycleTwoTable">
+                                        <tr class="right">
+                                            <th colspan="9" class="table-no-data">No Data Found</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="alert">
+                                <p><span>*** &nbsp;Please refer the Following Measurement Matrix for Competency
+                                        Level</span></p>
+                                <p>Novice = 0-25%, Advanced Beginner = 26-50%, Proficient = 51-75%, Expert = Above 76%
+                                </p>
+                            </div>
+                            <div class="row feedback-field-2">
+                                <div class="col-md-5">
+                                    <h5>Applaud</h5>
+                                    <ul class="applaud-data-2"></ul>
+                                </div>
+                                <div class="col-md-7">
+                                    <h5>Feedback</h5>
+                                    <ul class="feedback-data-2"></ul>
+                                </div>
+                            </div>
+                            <div class="chart-dashbord">
+                                <h3>Dashboard</h3>
+                                <canvas id="cycle_Two"></canvas>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="nav-lc_analysis" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <section class="fetching data_fetching" id="learning_cycle_analysis">
+                            <!--<h2>Learning Cycle Analysis</h2>-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School Head :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchoolHead">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Complex :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfTheComplex">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchool">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Complex UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text complexUDISECode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text udiseCode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the District :</label>
+                                        </div>
+                                        <div class="col-md-6 text district">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Contact Number :</label>
+                                        </div>
+                                        <div class="col-md-6 text contactNumber">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Mandal :</label>
+                                        </div>
+                                        <div class="col-md-6 text mandal ">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6 t">
+                                            <label for="" class="fetchinh-text">Training Venue :</label>
+                                        </div>
+                                        <div class="col-md-6 text">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6 t">
+                                            <label for="" class="fetchinh-text">Training Batch :</label>
+                                        </div>
+                                        <div class="col-md-6 text trainingBatch">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="responsive">
+                                <table class="table table-success table-striped cycle-two-table">
+
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2" class="text-center center">Leadership Competancy</th>
+                                            <th colspan="8" class="text-center">Score</th>
+                                        </tr>
+                                        <tr class="right">
+                                            <th scope="col">Maximum</th>
+                                            <th scope="col">Pre-Test</th>
+                                            <th scope="col">%</th>
+                                            <th scope="col">Post-Test</th>
+                                            <th scope="col">%</th>
+                                            <th scope="col">Difference</th>
+                                            <th>%</th>
+                                            <th>Compitency Level</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="learningCycle">
+                                        <th colspan="9" class="table-no-data">No Data Found</th>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="alert">
+                                <p><span>*** &nbsp;Please refer the Following Measurement Matrix for Competency
+                                        Level</span></p>
+                                <p>Novice = 0-25%, Advanced Beginner = 26-50%, Proficient = 51-75%, Expert = Above 76%
+                                </p>
+                            </div>
+                            <div class="row ">
+
+                                <div class="col-md-6">
+                                    <div class="chart-dashbord">
+                                        <h3>LC-1</h3>
+                                        <canvas id="Learning_cycle_one"></canvas>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="chart-dashbord">
+                                        <h3>LC-2</h3>
+                                        <canvas id="Learning_cycle_two"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="nav-competency_analysis" role="tabpanel"
+                        aria-labelledby="nav-contact-tab">
+                        <section class="fetching data_fetching" id="competency">
+                            <!--<h2>Competency Wise Analysis</h2>-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School Head :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchoolHead">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Complex :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfTheComplex">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the School :</label>
+                                        </div>
+                                        <div class="col-md-6 text nameOfSchool">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Complex UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text complexUDISECode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">UDISE Code :</label>
+                                        </div>
+                                        <div class="col-md-6 text udiseCode">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the District :</label>
+                                        </div>
+                                        <div class="col-md-6 text district">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Contact Number :</label>
+                                        </div>
+                                        <div class="col-md-6 text contactNumber">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="" class="fetchinh-text">Name of the Mandal :</label>
+                                        </div>
+                                        <div class="col-md-6 text mandal ">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6 t">
+                                            <label for="" class="fetchinh-text">Training Venue :</label>
+                                        </div>
+                                        <div class="col-md-6 text">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6 t">
+                                            <label for="" class="fetchinh-text">Training Batch :</label>
+                                        </div>
+                                        <div class="col-md-6 text trainingBatch">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="responsive">
+
+                                <table class="table table-success table-striped competencyWise-table">
+                                    <thead>
+                                        <tr class="text-center right">
+                                            <th class="center" rowspan="2">Leadership Competancy</th>
+                                            <th colspan="3">Competency Level</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Base Line</th>
+                                            <th>Mid Line</th>
+                                            <th>End Line</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="competencyWise">
+                                        <tr>
+                                            <td colspan="4" class="text-center"><b>No Data Found</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="alert">
+                                <p><span>*** &nbsp;Please refer the Following Measurement Matrix for Competency
+                                        Level</span></p>
+                                <p>Novice = 0-25%, Advanced Beginner = 26-50%, Proficient = 51-75%, Expert = Above 76%
+                                </p>
+                            </div>
+                            <div class="row feedback-field-2" id="competencyData">
+                                <div>
+
+                                    <h3>Baseline</h3>
+                                    <div class="row">
+
+                                        <div class="col-md-5">
+                                            <h5>Applaud</h5>
+                                            <ul class="applaud-data-3" id="baselineAppluad">
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <h5>Feedback</h5>
+                                            <ul class="feedback-data-3" id="baselineFeedback">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+
+                                    <h3>Midline</h3>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <h5>Appluad</h5>
+                                            <ul class="applaud-data-3" id="midlineAppluad"></ul>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <h5>Feedback</h5>
+                                            <ul class="feedback-data-3" id="midlineFeedback"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+
+                                    <h3>Endline</h3>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <h5>Applaud</h5>
+                                            <ul class="applaud-data-3" id="endlineAppluad"></ul>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <h5>Feedback</h5>
+                                            <ul class="feedback-data-3" id="endlineFeedback"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-dashbord">
+                                <h3>Dashboard</h3>
+                                <canvas id="competencyChart"></canvas>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="overall_dashboard" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <iframe title="Lc-1 Pre_test" width="100%" height="800"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiYmIzNjFlYmMtMjgzZi00NDc3LTgwNWYtZDIwN2FkOTE1OGY1IiwidCI6IjBhMDJkNWMxLTBhNTItNDkwZi1iMDRlLThjNDk2OTZjN2U5YiJ9&pageName=19bb22fd5cc846f4f0df"
+                            frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

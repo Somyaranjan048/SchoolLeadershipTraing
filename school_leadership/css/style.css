@@ -1,0 +1,841 @@
+@import url('../fonts/dsdigital.css');
+/*font-family: 'DS-Digital';*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display&family=Poppins:ital,wght@1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font-family: 'Playfair Display', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*font-family: 'Bebas Neue', sans-serif;*/
+@import url(aos.css);
+@import url(jquery.fancybox.min.css);
+@import url(bootstrap.min.css);
+@import url(owl.carousel.min.css);
+@import url(fontawesome/css/fontawesome.min.css);
+@import url(nav-menu.css);
+@import url(fontawesome/css/all.min.css);
+@import url(toaster.css);
+@import url(sweetalart.css);
+@import url(styleLoadder.css);
+
+
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),90%,95%);
+	--fg: hsl(var(--hue),90%,5%);
+	--trans-dur: 0.3s;
+	/* font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320)); */
+}
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border-top: 5px solid #ff7350;
+	background: #d0dfec;
+    font-size: 1em;
+}
+/*login*/
+body.login_bg {
+    background-image: url("../images/bg.jpg")!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+	border-top: none;
+}
+/* .login {
+    width: 23%;
+    margin: 144px auto;
+    text-align: center;
+    align-content: center;
+} */
+/* .login h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 38px;
+} */
+/* #logout_data{
+    display: none;
+} */
+.heading-title .logout {
+    position: absolute;
+    right: 8px;
+    top: 11px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #21a921;
+    color: #fff;
+    border: none;
+    transition: all ease-out 0.5s;
+}
+.heading-title .logout:hover {
+    background: #ccda1369;
+    color:#21a921;
+}
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+#endLineChart {
+    width: 100%;
+    height: 500px;
+}
+#stateAvgChart {
+    width: 100%;
+    height: 500px;
+}
+.input-container i {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    color: #918b8b;
+    padding: 6px 6px;
+}
+.login .input {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 14px;
+}
+.input-container input {
+	padding: 9px 30px;
+}
+/*---------------------login----------------------------*/
+.top-header {
+	position: relative;
+}
+#login-head{
+    margin-bottom:40px ;
+}
+.dept-text {
+	text-align: center;
+	padding-top: 22px;
+}
+.dept-text h1 {
+	font-size: 27px;
+}
+.dept-text h5 {
+	font-size: 18px;
+}
+.logo {
+    padding-top: 15px;
+    width: 100%;
+    height: 122px;
+    overflow: hidden;
+}
+.logo-samagra {
+    padding-top: 15px;
+    width: 100%;
+    height: 122px;
+    overflow: hidden;
+}
+.logo-samagra img {
+    object-fit: cover;
+    height: 100%;
+}
+.logo img {
+    object-fit: cover;
+    height: 100%;
+}
+section.heading-title {
+    position: relative;
+    background: #013f74;
+    height: 100%;
+    min-height: 58px;
+	border-radius: 5px;
+	transition: all ease-in-out 0.5s;
+}
+.fetching h2 {
+    margin: 0 auto 15px;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 26px;
+    color: #fff;
+}
+/*h2:before {
+    padding: 0 0 3px;
+    position: absolute;
+    content: '';
+    width: 168px;
+    height: 0px;
+    background: #2424a6;
+    bottom: -2px;
+}*/
+.submit {
+    background: #21a921;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all ease-in-out 0.5s;
+    border: 1px solid #21a921;
+}
+.submit:hover {
+    border: 1px solid #21a921;
+    background: none;
+    color: #21a921;
+}
+#fetchDataForm {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 50px 420px;
+}
+label.fetchinh-text {
+    font-weight: 700;
+}
+.nav-tabs .nav-link {
+    background: #6db26d !important;
+    color: #fff;
+    margin: 0 3px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #fff;
+    background: #099309 !important;
+}
+.tab-content .tab-pane {
+    padding: 23px 20px;
+    border: 1px solid #00800061;
+    box-shadow: 0px 3px 20px 0px #00800061;
+	border-radius: 5px;
+}
+.feedback-field, .feedback-field-2 {
+    height: 400px;
+    overflow-y: scroll;
+}
+section.fetching .center {
+    width: 30%;
+    margin: 13px auto;
+}
+section.fetching .text {
+    border: 1px solid #6db26d57;
+    margin: 3px 0;
+    height: 24px;
+    box-shadow: inset 0 0 8px 2px #6db26d57;
+    border-radius: 5px;
+    width: 48%;
+}
+
+/*.logo {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+}*/
+.data_fetching th, td {
+    border: 1px solid;
+}
+.data_fetching tbody, td {
+    text-align: left!important;
+}
+.pie_chart {
+	height: 500px;
+    width: 100%;
+}
+.responsive {
+    padding-top: 40px;
+}
+section.remark p {
+    font-size: 13px;
+}
+.data_fetching .center {
+    width: 30%;
+    padding-bottom: 26px;
+}
+.data_fetching .responsive {
+	overflow-x: auto;
+}
+.data_fetching .right th {
+    text-align: center;
+}
+.data_fetching td {
+    text-align: center;
+}
+.remark ul li {
+	list-style: decimal;
+}
+.data_overall td{
+	text-align: center;
+}
+.data_overall th, td {
+    border: 1px solid;
+}
+.data_overall .right th {
+    text-align: center;
+}
+.alert p {
+    color: red;
+}
+#tab {
+    /* display: none; */
+    position: relative;
+    top: 25px;
+    left: 0;
+}
+.tab-bar {
+    position: absolute;
+    top: -4rem;
+    margin: 0 0 20px;
+    width: 100%;
+}
+.tab-content .tab-pane {
+    padding: 23px 20px;
+	background: #fff;
+	overflow-x: visible;
+}
+.point-title-bold {
+	font-weight: 700;
+}
+
+.up-icon {
+    color: #25a433;
+  }
+  
+  .down-icon {
+    color: #fa1100;
+  }
+  
+
+/*  Custom Scrollbar*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background: #2424a6;
+}
+
+.table-no-data{
+    --bs-table-accent-bg: #e9e9e9 !important;
+}
+
+/*
+ *  Custom Scrollbar End
+ */
+ /*Max Width*/
+
+@media (max-width:1900px) {
+   
+}
+@media (max-width:1619px) {
+   
+}
+@media (max-width:1400px) {
+    	
+}
+@media (max-width:1300px) {
+   .nav-tabs .nav-link {
+    margin: 2px 3px;
+	}
+}
+@media (max-width:1200px) {
+   .nav-tabs .nav-link {
+    margin: 2px 3px;
+	}
+}
+
+@media (max-width:992px) {
+   .nav-tabs .nav-link {
+    margin: 2px 3px;
+	}
+	#fetchDataForm {
+    padding: 50px 310px;
+}
+}
+
+@media (max-width:768px) {
+   .nav-tabs .nav-link {
+    margin: 2px 3px;
+	}
+	.dept-text h1 {
+    font-size: 20px;
+}
+.dept-text h5 {
+    font-size: 14px;
+}
+.dept-text h6 {
+    font-size: 12px;
+}
+#fetchDataForm {
+    padding: 50px 178px;
+}
+.logo-samagra img {
+    height: 68%;
+}
+}
+
+@media (max-width:576px) {
+	.logo-samagra {
+    display: none;
+}
+	#fetchDataForm {
+    padding: 50px 100px;
+}
+	.nav-tabs .nav-link {
+    margin: 2px 3px;
+}
+.dept-text {
+    position: absolute;
+    left: 140px;
+    padding-top: 18px;
+    top: 0;
+}
+.dept-text h1 {
+    font-size: 24px;
+}
+}
+@media (max-width:480px) {
+	.dept-text {
+    position: absolute;
+    top: 0;
+    left: 113px;
+}
+.dept-text h1 {
+    font-size: 18px;
+}
+.dept-text h5 {
+    font-size: 13px;
+}
+.dept-text h6 {
+    font-size: 11px;
+}
+.logo img {
+    height: 62%;
+}
+.logo-samagra {
+    display: none;
+}
+#fetchDataForm {
+    padding: 50px;
+}
+}
+.nav-tabs .nav-link {
+    margin: 2px 3px;
+}
+
+
+@media (max-width:420px) {
+	#fetchDataForm {
+    left: 7px;
+	padding: 50px;
+}
+.fetching h2 {
+    font-size: 19px;
+}
+.dept-text {
+    left: 69px;
+	padding-top: 11px;
+}
+.tab-bar {
+    top: 4px;
+}
+}
+@media (max-width:360px) {
+	#fetchDataForm {
+    padding: 50px 50px;
+}
+section.fetching .text {
+    font-size: 10px;
+    padding: 3px 10px;
+}
+.responsive {
+    overflow-x: scroll;
+}
+#tab {
+    top: 0px;
+}
+}
+
+/*Max Width End*/
+
+/*loginPage*/
+
+
+.login_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    
+}
+
+.form-login {
+    width: 23em;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 10px 25px rgba(90,100,100,.2);
+    background-color: #fff;
+}
+
+.form_title {
+    font-weight: 300;
+    margin-bottom: 1.3em;
+}
+
+.form_div {
+    position: relative;
+    height: 3em;
+    margin-bottom: 1.6em;
+}
+
+.form_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    border: .1em solid #dadce0;
+    border-radius: .5em;
+    outline: none;
+    padding: 1em;
+    z-index: 1;
+    background: none;
+}
+
+.form_label {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    padding: 0 .25em;
+    background-color: #fff;
+    color: #80868b;
+    font-size: 1em;
+    transition: .4s;
+}
+
+.form_button {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    padding: 1em 2em;
+    outline: none;
+    border: none;
+    background-color: rgb(28,164,248);
+    color: #fff;
+    font-size: 1em;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: .4s;
+    margin-top: 6.3em;
+}
+
+.form_button:hover {
+    transform: scale(0.90);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.20);
+}
+
+.form_input:focus + .form_label {
+    top: -.5em;
+    left: .8em;
+    color: rgb(28,164,248);
+    font-size: .80em;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
+    top: -.5em;
+    left: .8em;
+    font-size: .80em;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.form_input:focus {
+    border: .1em solid rgb(28,164,248);
+}
+
+#captcha {
+    margin: 15px 0px;
+}
+
+#captcha .preview {
+    color: #555;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 8px;
+    border: 1px dashed #888;
+    border-radius: 0.5em;
+    margin-bottom: 1.6em;
+}
+
+.form_input_captcha {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    border: 0.1em solid #dadce0;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 1em;
+    z-index: 1;
+    background: none;
+}
+.captcha_refresh{
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 23%;
+}
+.form_label_captcha {
+    position: absolute;
+    left: 1em;
+    top: 5.2em;
+    padding: 0 .25em;
+    background-color: #fff;
+    color: #80868b;
+    font-size: 1em;
+    transition: .4s;
+}
+
+.form_input_captcha:focus + .form_label_captcha {
+    top: 4.7em;
+    left: .8em;
+    color: rgb(28,164,248);
+    font-size: .80em;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.form_input_captcha:not(:placeholder-shown).form_input_captcha:not(:focus) + .form_label_captcha {
+    top: 4.6em;
+    left: .8em;
+    font-size: .80em;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.form_input_captcha:focus {
+    border: .1em solid rgb(28,164,248);
+}
+
+#captcha .preview span {
+    display: inline-block;
+    user-select: none;
+}
+
+#captcha .captcha_form {
+    display: flex;
+}
+
+#captcha .captcha_form input {
+    width: 100%;
+    font-size: 1em;
+    border-radius: 0.5em;
+    outline: none; 
+    padding: 1em;
+    z-index: 1;
+    background: none;
+}
+
+.captcha_refersh {
+    width: 40px;
+    border: none;
+    outline: none;
+    background: #888;
+    color: #eee;
+    cursor: pointer;
+    border-radius: 0.5em;
+    margin-left: 5px;
+    transition: .4s;
+}
+
+.captcha_refersh:hover {
+    transform: scale(0.90);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.20);
+}
+
+.setPasword-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.set_password_button{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    padding: 1em 2em;
+    outline: none;
+    border: none;
+    background-color: rgb(28,164,248);
+    color: #fff;
+    font-size: 1em;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: .4s;
+    margin-top: 1.3em;
+}
+.set_password_button:hover {
+    transform: scale(0.90);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.20);
+}
+
+.page-break { page-break-after: always; }
+
+/* Overlay Styles */
+#overlay {
+    /* background-color: var(--bg); */
+    background-color: #0e213296;
+    color: var(--fg);
+    font: 1em/1.5 sans-serif;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9998; /* Just below the loader */
+    display: none; /* Changed from 'none' to 'flex' */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: background-color var(--trans-dur);
+}
+
+#loaderContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Make sure it's on top of other elements */
+    display: none; /* Hidden by default */
+    padding: 1.5em 0;
+}
+.ip {
+    width: 16em;
+    height: 8em;
+}
+.ip__track {
+    stroke: hsl(var(--hue),90%,90%);
+    transition: stroke var(--trans-dur);
+}
+.ip__worm1,
+.ip__worm2 {
+    animation: worm1 2s linear infinite;
+}
+.ip__worm2 {
+    animation-name: worm2;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: hsl(var(--hue),90%,5%);
+        --fg: hsl(var(--hue),90%,95%);
+    }
+    .ip__track {
+        stroke: hsl(var(--hue),90%,15%);
+    }
+}
+@keyframes worm1 {
+    from {
+        stroke-dashoffset: 0;
+    }
+    50% {
+        animation-timing-function: steps(1);
+        stroke-dashoffset: -358;
+    }
+    50.01% {
+        animation-timing-function: linear;
+        stroke-dashoffset: 358;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes worm2 {
+    from {
+        stroke-dashoffset: 358;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -358;
+    }
+}
+
+/*---------------------dashbord style-------------------------------*/
+.chart-dashbord{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 1em;
+    box-shadow: 2px 20px 35px rgba(47, 49, 49, 0.2);
+    background-color: #f6ebeb;
+}
+
+.heading-title .generate_report button {
+    display: inline-block;
+    background: #21a921;
+    color: #fff!important;
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    position: absolute;
+    right: 105px;
+    top: 11px;
+	border: none;
+}
+
+#drawerChart {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#legend {
+    display: flex;
+    flex-direction: column;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer; /* Change cursor to pointer */
+}
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+@media print {
+    body {
+        width: 210mm; /* Set width to A4 size */
+        height: 297mm; /* Set height to A4 size */
+        margin: 0; /* Remove margins */
+    }
+    table {
+        width: 100%; /* Ensure tables take up the full width */
+        border-collapse: collapse; /* Collapse table borders */
+    }
+    th, td {
+        border: 1px solid #000; /* Add borders to table cells */
+        padding: 5px; /* Add padding to table cells */
+        text-align: left; /* Align text in cells */
+    }
+}
+
